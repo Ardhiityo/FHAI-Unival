@@ -323,7 +323,7 @@
         </section>
         <section class="contact section-wrap section-space" id="kontak">
             <div class="contact-heading">
-                <p class="eyebrow"><span class="eyebrow-line"></span KAMI SIAP MENYAPA</p>
+                <p class="eyebrow"><span class="eyebrow-line"></span> KAMI SIAP MENYAPA</p>
                 <h2>Mari terhubung<br><em>dengan kami.</em></h2>
                 <p>Punya pertanyaan tentang program atau pendaftaran? Tim kami siap membantu.</p>
             </div>
@@ -343,7 +343,7 @@
                     <span class="map-label-icon" aria-hidden="true">⌖</span>
                     <span class="map-label-copy">
                         <strong>Universitas Al-Khairiyah</strong>
-                        <small>Jl. Jenderal Ahmad Yani No. 1 · Cilegon, Banten</small>
+                        <small>Jl. Kh.Enggus Arja No.1, Kec. Citangkil, Kota Cilegon</small>
                     </span>
                     <a class="map-directions"
                         href="https://www.google.com/maps/search/?api=1&amp;query=Universitas+Al-Khairiyah+Cilegon"
@@ -355,10 +355,16 @@
     <footer class="footer">
         <div class="section-wrap">
             <div class="footer-main">
-                <div class="footer-brand"><a class="brand brand-footer" href="#home"><span
-                            class="brand-mark">ف</span><span
-                            class="brand-name">FHAI<small>AL-KHAIRIYAH</small></span></a>
-                    <p>Fakultas Hukum dan Agama Islam<br>Universitas Al-Khairiyah</p>
+                <div class="footer-brand">
+                    <a class="brand brand-footer" href="#home">
+                        <span class="brand-mark">
+                            <img src="{{ asset('assets/logo/unival.webp') }}" width="40" height="40" alt="unival">
+                        </span>
+                        <span class="brand-name">
+                            Fakultas Hukum Agama Islam
+                            <small>UNIVERSITAS AL-KHAIRIYAH</small>
+                        </span>
+                    </a>
                     <p class="footer-motto">Berilmu, berintegritas, membawa maslahat.</p>
                 </div>
                 <div class="footer-column">
@@ -377,20 +383,21 @@
                         href="https://tiktok.com" target="_blank" rel="noreferrer">TikTok ↗</a>
                 </div>
             </div>
-            <div class="footer-bottom"><span>© 2025 FHAI Universitas Al-Khairiyah. Hak cipta dilindungi.</span><a
-                    href="#kontak">Kebijakan Privasi</a><span class="footer-credit">Dibangun dengan niat baik
-                    <span>✳</span></span></div>
+            <div class="footer-bottom">
+                <span>
+                    © {{ now()->year }} Fakultas Hukum Agama Islam Universitas Al-Khairiyah.
+                    Hak cipta
+                    dilindungi.
+                </span>
+                <span class="footer-credit">
+                    Developed By
+                    <a href="https://linkedin.com/in/ardhiityo" target="_blank">
+                        <span style="color: white;">Arya Adhi Prasetyo</span>
+                    </a>
+                </span>
+            </div>
         </div>
     </footer>
-    <div class="modal" id="video-modal" aria-hidden="true" role="dialog" aria-modal="true"
-        aria-label="Video pengenalan fakultas">
-        <div class="modal-backdrop" data-close-modal></div>
-        <div class="modal-panel"><button class="modal-close" id="modal-close" type="button"
-                aria-label="Tutup video">×</button>
-            <div class="video-placeholder"><span class="play-button">▶</span><strong>Video pengenalan
-                    FHAI</strong><small>Video contoh · tambahkan tautan video resmi fakultas</small></div>
-        </div>
-    </div>
     <script src="{{ asset('assets/script.js') }}"></script>
 </body>
 
