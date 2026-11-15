@@ -9,7 +9,6 @@ class StatisticSection extends Model
 {
     protected $fillable = [
         'title',
-        'description',
         'total',
     ];
 

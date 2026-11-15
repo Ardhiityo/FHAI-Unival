@@ -2,7 +2,6 @@
 
 namespace App\Filament\Resources\StatisticSections\Schemas;
 
-use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
 
@@ -12,16 +11,12 @@ class StatisticSectionForm
     {
         return $schema
             ->components([
-                TextInput::make('total')
-                    ->columnSpanFull()
-                    ->required(),
                 TextInput::make('title')
                     ->columnSpanFull()
                     ->required(),
-                Textarea::make('description')
+                TextInput::make('total')
                     ->columnSpanFull()
-                    ->required()
-                    ->columnSpanFull(),
+                    ->required(),
             ]);
     }
 }

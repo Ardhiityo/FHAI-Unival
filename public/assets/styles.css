@@ -100,13 +100,10 @@ button {
     display: grid;
     place-items: center;
     border-radius: 50%;
-    background: var(--accent);
-    color: white;
-    font-family: var(--serif);
     font-size: 25px;
 }
 .brand-name {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.12em;
     line-height: 1.1;

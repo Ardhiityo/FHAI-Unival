@@ -20,7 +20,7 @@
     <meta property="og:description" content="Fakultas Hukum Agama Islam Universitas Al-Khairiyah.">
     <meta property="og:url" content="https://remafik.unival-cilegon.ac.id/">
     <meta property="og:site_name" content="Rema FIK">
-    <meta property="og:image" content="{{ asset('assets/logo/favicon.webp') }}">
+    <meta property="og:image" content="{{ asset('assets/logo/unival.webp') }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="{{ app()->getLocale() }}">
@@ -29,14 +29,20 @@
     <meta name="twitter:description" content="Fakultas Hukum Agama Islam Universitas Al-Khairiyah.">
     <!--SEO-->
 
+    <link rel="shortcut icon" href="{{ asset('assets/logo/unival.webp') }}" type="image/x-icon">
+
     <link rel="stylesheet" href="{{ asset('assets/styles.css') }}">
 </head>
 
 <body>
     <header class="site-header" id="home">
         <nav class="island" aria-label="Navigasi utama">
-            <a class="brand" href="#home" aria-label="FHAI, ke beranda"><span class="brand-mark">ف</span><span
-                    class="brand-name">FHAI<small>AL-KHAIRIYAH</small></span></a>
+            <a class="brand" href="/" aria-label="FHAI, ke beranda">
+                <span class="brand-mark">
+                    <img src="{{ asset('assets/logo/unival.webp') }}" height="40" width="40" alt="unival">
+                </span>
+                <span class="brand-name">Fakultas Hukum Agama Islam<small>UNIVERSITAS AL-KHAIRIYAH</small></span>
+            </a>
             <div class="nav-links" id="nav-links"><a href="#home">Home</a><a href="#tentang">Tentang</a><a
                     href="#visi">Visi &amp; Misi</a><a href="#program">Program Studi</a><a href="#layanan">Layanan</a><a
                     href="#berita">Berita</a><a href="#kontak">Contact</a></div>
