@@ -20,7 +20,7 @@ class ServiceSectionResource extends Resource
 {
     protected static ?string $model = ServiceSection::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::PresentationChartBar;
 
     protected static ?string $recordTitleAttribute = 'title';
 

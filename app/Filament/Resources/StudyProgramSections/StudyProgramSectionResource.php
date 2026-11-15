@@ -20,7 +20,7 @@ class StudyProgramSectionResource extends Resource
 {
     protected static ?string $model = StudyProgramSection::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::AcademicCap;
 
     protected static ?string $recordTitleAttribute = 'title';
 
