@@ -6,7 +6,9 @@ use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
+use Illuminate\Support\Str;
 
 class NewsSectionForm
 {
@@ -15,8 +17,18 @@ class NewsSectionForm
         return $schema
             ->components([
                 TextInput::make('title')
-                    ->required(),
+                    ->required()
+                    ->live(onBlur: true)
+                    ->afterStateUpdated(
+                        fn (Set $set, ?string $state) => $set('slug', Str::slug($state ?? ''))
+                    ),
                 TextInput::make('slug')
+                    ->readOnly()
+                    ->unique(
+                        table: 'news_sections',
+                        column: 'slug',
+                        ignoreRecord: true,
+                    )
                     ->required(),
                 Textarea::make('description')
                     ->required()
