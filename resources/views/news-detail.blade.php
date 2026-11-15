@@ -21,7 +21,7 @@
         <nav class="island" aria-label="Navigasi utama">
             <a class="brand" href="/" aria-label="FHAI, ke beranda">
                 <span class="brand-mark">
-                    <img src="{{ asset('assets/logo/unival.webp') }}" height="40" width="40" alt="unival">
+                    <img src="{{ asset('assets/logo/unival.webp') }}" alt="unival">
                 </span>
                 <span class="brand-name">Fakultas Hukum Agama Islam<small>UNIVERSITAS AL-KHAIRIYAH</small></span>
             </a>
@@ -92,7 +92,7 @@
                 <div class="footer-brand">
                     <a class="brand brand-footer" href="/">
                         <span class="brand-mark">
-                            <img src="{{ asset('assets/logo/unival.webp') }}" width="40" height="40" alt="unival">
+                            <img src="{{ asset('assets/logo/unival.webp') }}" alt="unival">
                         </span>
                         <span class="brand-name">Fakultas Hukum Agama Islam<small>UNIVERSITAS
                                 AL-KHAIRIYAH</small></span>
