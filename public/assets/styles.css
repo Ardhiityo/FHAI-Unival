@@ -1485,6 +1485,11 @@ button {
         height: 470px;
     }
 }
+@media (max-width: 1100px) {
+    .hero {
+        overflow: clip;
+    }
+}
 @media (max-width: 800px) {
     .section-wrap {
         width: min(100% - 40px, 620px);
@@ -1696,8 +1701,32 @@ button {
     .section-space {
         padding-block: 66px;
     }
+    .brand {
+        flex: 1 1 auto;
+        min-width: 0;
+        gap: 7px;
+    }
+    .brand-mark {
+        flex: 0 0 32px;
+        width: 32px;
+        height: 32px;
+    }
+    .brand-mark img {
+        max-width: 100%;
+        max-height: 100%;
+    }
     .brand-name {
-        font-size: 13px;
+        flex: 1 1 auto;
+        min-width: 0;
+        max-width: clamp(100px, 38vw, 190px);
+        font-size: clamp(9px, 2.5vw, 13px);
+        letter-spacing: 0.06em;
+        line-height: 1.15;
+        overflow-wrap: anywhere;
+    }
+    .brand-name small {
+        font-size: clamp(6px, 1.8vw, 8px);
+        letter-spacing: 0.12em;
     }
     .nav-apply {
         font-size: 0;
@@ -1716,13 +1745,14 @@ button {
         font-size: 8px;
     }
     .hero h1 {
-        font-size: 43px;
+        font-size: clamp(34px, 10.8vw, 43px);
     }
     .hero-description {
         font-size: 12px;
     }
     .hero-actions {
-        gap: 17px;
+        flex-wrap: wrap;
+        gap: 12px;
     }
     .hero-actions .button {
         padding: 13px 15px;
@@ -1800,7 +1830,7 @@ button {
     .about-copy h2,
     .vision h2,
     .contact h2 {
-        font-size: 38px;
+        font-size: clamp(31px, 9.5vw, 38px);
     }
     .about-points {
         grid-template-columns: 1fr;
@@ -1812,13 +1842,13 @@ button {
         padding: 24px;
     }
     .vision-card p {
-        font-size: 18px;
+        font-size: clamp(16px, 5vw, 18px);
     }
     .mission-list {
         padding-left: 17px;
     }
     .section-heading h2 {
-        font-size: 40px;
+        font-size: clamp(32px, 10vw, 40px);
     }
     .program-grid {
         grid-template-columns: 1fr;
@@ -1865,7 +1895,7 @@ button {
         margin-block: 28px 30px;
     }
     .news-detail-title {
-        font-size: 39px;
+        font-size: clamp(30px, 8.5vw, 39px);
     }
     .news-detail-cover {
         aspect-ratio: 4 / 3;
@@ -1887,13 +1917,14 @@ button {
         padding-block: 60px;
     }
     .cta-inner h2 {
-        font-size: 42px;
+        font-size: clamp(33px, 10.5vw, 42px);
     }
     .cta-actions {
         margin-top: 27px;
         flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
-        gap: 20px;
+        gap: 14px;
     }
     .cta-decoration {
         right: -25px;
@@ -1947,6 +1978,26 @@ button {
     }
     .footer-bottom span:first-child {
         width: 100%;
+    }
+}
+@media (max-width: 390px) {
+    .island,
+    .island.compact {
+        width: calc(100% - 20px);
+        padding-inline: 10px;
+    }
+    .nav-actions {
+        flex-shrink: 0;
+        gap: 5px;
+    }
+    .theme-toggle,
+    .menu-toggle,
+    .nav-apply {
+        width: 32px;
+        height: 32px;
+    }
+    .nav-apply {
+        min-width: 32px;
     }
 }
 @media (prefers-reduced-motion: reduce) {

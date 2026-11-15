@@ -307,7 +307,7 @@
                     </p>
                     <h2>Kabar &amp; <em>inspirasi.</em></h2>
                 </div>
-                <a href="#berita" class="text-link desktop-link">Semua berita <span>↗</span></a>
+                <span class="text-link desktop-link">Semua berita</span>
             </div>
             <div class="news-grid">
                 @forelse ($news as $item)
