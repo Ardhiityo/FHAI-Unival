@@ -13,10 +13,13 @@ class StatisticSectionForm
         return $schema
             ->components([
                 TextInput::make('total')
+                    ->columnSpanFull()
                     ->required(),
                 TextInput::make('title')
+                    ->columnSpanFull()
                     ->required(),
                 Textarea::make('description')
+                    ->columnSpanFull()
                     ->required()
                     ->columnSpanFull(),
             ]);

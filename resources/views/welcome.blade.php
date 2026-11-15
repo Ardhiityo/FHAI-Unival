@@ -13,6 +13,22 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
         rel="stylesheet">
+
+    <!--SEO-->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FHAI | Universitas Al-Khairiyah">
+    <meta property="og:description" content="Fakultas Hukum Agama Islam Universitas Al-Khairiyah.">
+    <meta property="og:url" content="https://remafik.unival-cilegon.ac.id/">
+    <meta property="og:site_name" content="Rema FIK">
+    <meta property="og:image" content="{{ asset('assets/logo/favicon.webp') }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="{{ app()->getLocale() }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rema FIK | Universitas Al-Khairiyah">
+    <meta name="twitter:description" content="Fakultas Hukum Agama Islam Universitas Al-Khairiyah.">
+    <!--SEO-->
+
     <link rel="stylesheet" href="{{ asset('assets/styles.css') }}">
 </head>
 

@@ -14,8 +14,10 @@ class StudyProgramSectionForm
         return $schema
             ->components([
                 TextInput::make('title')
+                    ->columnSpanFull()
                     ->required(),
                 FileUpload::make('image_url')
+                    ->columnSpanFull()
                     ->image()
                     ->required()
                     ->directory('study_programs')
@@ -26,9 +28,11 @@ class StudyProgramSectionForm
                     ->openable()
                     ->hint('Image files only. Maximum size: 1MB'),
                 Textarea::make('description')
+                    ->columnSpanFull()
                     ->required()
                     ->columnSpanFull(),
                 TextInput::make('detail_url')
+                    ->columnSpanFull()
                     ->url()
                     ->required(),
             ]);

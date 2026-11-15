@@ -4,7 +4,7 @@ namespace App\Filament\Resources\NewsSections\Schemas;
 
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
@@ -18,6 +18,7 @@ class NewsSectionForm
             ->components([
                 TextInput::make('title')
                     ->required()
+                    ->columnSpanFull()
                     ->live(onBlur: true)
                     ->afterStateUpdated(
                         fn (Set $set, ?string $state) => $set('slug', Str::slug($state ?? ''))
@@ -29,11 +30,13 @@ class NewsSectionForm
                         column: 'slug',
                         ignoreRecord: true,
                     )
+                    ->columnSpanFull()
                     ->required(),
-                Textarea::make('description')
+                RichEditor::make('description')
                     ->required()
                     ->columnSpanFull(),
                 DatePicker::make('date')
+                    ->columnSpanFull()
                     ->required(),
                 FileUpload::make('image_url')
                     ->image()
@@ -42,6 +45,7 @@ class NewsSectionForm
                     ->disk('public')
                     ->visibility('public')
                     ->openable()
+                    ->columnSpanFull()
                     ->maxSize(1024)
                     ->hint('Image files only. Maximum size: 1MB'),
             ]);
