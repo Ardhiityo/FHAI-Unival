@@ -9,6 +9,7 @@ use Filament\Actions\ViewAction;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Support\Facades\Storage;
 
 class StudyProgramSectionsTable
 {
@@ -41,7 +42,15 @@ class StudyProgramSectionsTable
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
-                    DeleteBulkAction::make(),
+                    DeleteBulkAction::make()
+                        ->before(function ($records) {
+                            // Delete all files before bulk delete
+                            foreach ($records as $study_program) {
+                                if (Storage::disk('public')->exists($study_program->image_url)) {
+                                    Storage::disk('public')->delete($study_program->image_url);
+                                }
+                            }
+                        }),
                 ]),
             ]);
     }
