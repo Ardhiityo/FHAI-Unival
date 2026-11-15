@@ -180,11 +180,27 @@
                     <div class="vision-symbol">۞</div>
                 </div>
                 <div class="vision-content">
-                    <div class="vision-card"><span class="card-index">01 / VISI</span>
-                        <p>Menjadi fakultas yang unggul dalam pengembangan ilmu hukum dan keislaman, berlandaskan nilai
-                            kemanusiaan, keadilan, dan kearifan lokal.</p>
-                    </div>
-                    <div class="mission-list"><span class="card-index">02 / MISI</span>
+                    @forelse ($visions as $vision)
+                        <div class="vision-card"><span class="card-index">01 / VISI</span>
+                            <p>{{ $vision->vision }}</p>
+                        </div>
+                    @empty
+                        <div class="vision-card"><span class="card-index">01 / VISI</span>
+                            <p>Menjadi fakultas yang unggul dalam pengembangan ilmu hukum dan keislaman, berlandaskan nilai
+                                kemanusiaan, keadilan, dan kearifan lokal.</p>
+                        </div>
+                    @endforelse
+                    @forelse ($missions as $index => $mission)
+                            <div class="mission-list">
+                                <span class="card-index">02 / MISI</span>
+                                <div class="mission-item"><b>{{ number_format($index + 1, 2) }}</b>
+                                    <p>{{ $mission->mission }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    @empty
+                    <div class="mission-list">
+                        <span class="card-index">02 / MISI</span>
                         <div class="mission-item"><b>01</b>
                             <p>Menyelenggarakan pendidikan hukum dan keislaman yang bermutu serta relevan dengan
                                 perkembangan zaman.</p>
@@ -198,7 +214,8 @@
                             </p>
                         </div>
                     </div>
-                </div>
+                @endforelse
+            </div>
             </div>
         </section>
         <section class="program section-wrap section-space" id="program">

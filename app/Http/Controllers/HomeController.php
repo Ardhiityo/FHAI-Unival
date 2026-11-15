@@ -17,7 +17,9 @@ class HomeController extends Controller
         $study_program = StudyProgramSection::all();
         $services = ServiceSection::all();
         $contacts = Contact::orderBy('id', 'desc')->take(1)->get();
+        $visions = Contact::orderBy('id', 'desc')->take(1)->get();
+        $missions = Contact::orderBy('id', 'desc')->take(5)->get();
 
-        return view('welcome', compact('statistic_sections', 'hero_sections', 'study_program', 'services', 'contacts'));
+        return view('welcome', compact('statistic_sections', 'hero_sections', 'study_program', 'services', 'contacts', 'visions', 'missions'));
     }
 }
