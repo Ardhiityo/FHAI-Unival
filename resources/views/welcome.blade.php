@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f7fb">
+    <meta name="description"
+        content="Fakultas Hukum dan Agama Islam Universitas Al-Khairiyah — membentuk insan akademis, berintegritas, dan berkeadilan.">
+    <title>FHAI — Universitas Al-Khairiyah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/styles.css') }}">
+</head>
+
+<body>
+    <header class="site-header" id="home">
+        <nav class="island" aria-label="Navigasi utama">
+            <a class="brand" href="#home" aria-label="FHAI, ke beranda"><span class="brand-mark">ف</span><span
+                    class="brand-name">FHAI<small>AL-KHAIRIYAH</small></span></a>
+            <div class="nav-links" id="nav-links"><a href="#home">Home</a><a href="#tentang">Tentang</a><a
+                    href="#visi">Visi &amp; Misi</a><a href="#program">Program Studi</a><a href="#layanan">Layanan</a><a
+                    href="#berita">Berita</a><a href="#kontak">Contact</a></div>
+            <div class="nav-actions"><button class="theme-toggle" id="theme-toggle" type="button"
+                    aria-label="Aktifkan mode gelap" title="Ubah tema"><span class="theme-icon">☾</span></button><a
+                    class="button button-small nav-apply" href="#kontak">Daftar Sekarang <span>↗</span></a><button
+                    class="menu-toggle" id="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false"
+                    aria-controls="nav-links"><span></span><span></span></button></div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero section-wrap">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="eyebrow-line"></span UNIVERSITAS AL-KHAIRIYAH · CILEGON</p>
+                <h1>Menguatkan ilmu.<br><em>Menegakkan keadilan.</em></h1>
+                <p class="hero-description">Tempat bertemunya nilai hukum, keislaman, dan kemanusiaan. Bersama kami,
+                    tumbuh menjadi pemimpin yang berilmu dan berintegritas.</p>
+                <div class="hero-actions"><a class="button" href="#kontak">Daftar Sekarang <span>↗</span></a><a
+                        class="text-link" href="#tentang">Jelajahi fakultas <span>↓</span></a></div>
+                <div class="hero-note">
+                    <div class="avatar-stack"><span>FH</span><span>AI</span><span>UA</span></div>
+                    <p><strong>Belajar dengan makna</strong><br>Berakar pada nilai, siap untuk masa depan.</p>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-glow"></div>
+                <div class="image-frame"><img src="./assets/campus-hero.png"
+                        alt="Suasana akademik dengan buku hukum dan ornamen islami">
+                    <div class="image-shade"></div>
+                    <div class="image-caption"><span class="caption-kicker">RUANG TUMBUH</span><strong>Ilmu
+                            untuk<br>kemaslahatan.</strong></div>
+                </div>
+                <div class="floating-seal"><span class="seal-star">✳</span><span>ILMU · ADAB · AMANAH</span></div>
+                <div class="floating-stat"><span class="stat-icon">✦</span>
+                    <div><strong>Berdaya saing</strong><small>Berlandaskan nilai Islami</small></div>
+                </div>
+                <div class="hero-orbit orbit-one"></div>
+                <div class="hero-orbit orbit-two"></div>
+            </div>
+            <div class="hero-bottom"><span>01 / 04</span><span class="hero-bottom-line"></span><span>ILMU · INTEGRITAS ·
+                    KEMANUSIAAN</span></div>
+        </section>
+        <section class="stats section-wrap" aria-label="Statistik fakultas">
+            <div class="stat-item"><strong>02</strong><span>Program Studi</span></div>
+            <div class="stat-item"><strong>1.2<span>k</span></strong><span>Mahasiswa aktif</span></div>
+            <div class="stat-item"><strong>38</strong><span>Dosen &amp; akademisi</span></div>
+            <div class="stat-item stat-quote"><span class="quote-mark">“</span>
+                <p>Pendidikan yang baik melahirkan keberanian untuk berbuat benar.</p>
+            </div>
+        </section>
+        <section class="about section-wrap section-space" id="tentang">
+            <div class="about-visual">
+                <div class="about-photo"><img src="./assets/campus-hero.png"
+                        alt="Detail ruang belajar FHAI dengan buku dan simbol keadilan"></div>
+                <div class="about-badge"><span>جامعة</span><strong>AL-KHAIRIYAH</strong><small>EST. 1925</small></div>
+                <span class="about-vertical">FAKULTAS HUKUM &amp; AGAMA ISLAM</span>
+            </div>
+            <div class="about-copy">
+                <p class="eyebrow"><span class="eyebrow-line"></span TENTANG KAMI</p>
+                <h2>Akademik yang berakar,<br><em>relevan untuk zaman.</em></h2>
+                <p>Fakultas Hukum dan Agama Islam Universitas Al-Khairiyah hadir untuk mencetak generasi yang memahami
+                    hukum, menghidupi nilai keislaman, dan peka terhadap kebutuhan masyarakat.</p>
+                <p>Melalui pembelajaran yang kritis dan lingkungan yang inklusif, kami mempersiapkan lulusan untuk
+                    berkontribusi di ruang publik, lembaga hukum, dan komunitas.</p>
+                <div class="about-points"><span><b>01</b> Pembelajaran kontekstual</span><span><b>02</b> Dosen
+                        berpengalaman</span><span><b>03</b> Nilai integritas</span></div><a class="text-link"
+                    href="#visi">Selengkapnya tentang FHAI <span>↗</span></a>
+                <div class="video-card"><button class="play-button" id="video-button" type="button"
+                        aria-label="Putar video pengenalan fakultas">▶</button><span><strong>Kenali FHAI lebih
+                            dekat</strong><small>Video pengenalan fakultas · 02:15</small></span><span
+                        class="video-duration">02:15</span></div>
+            </div>
+        </section>
+        <section class="vision section-space" id="visi">
+            <div class="section-wrap vision-grid">
+                <div>
+                    <p class="eyebrow"><span class="eyebrow-line"></span ARAH &amp; TUJUAN</p>
+                    <h2>Masa depan yang<br><em>kami perjuangkan.</em></h2>
+                    <div class="vision-symbol">۞</div>
+                </div>
+                <div class="vision-content">
+                    <div class="vision-card"><span class="card-index">01 / VISI</span>
+                        <p>Menjadi fakultas yang unggul dalam pengembangan ilmu hukum dan keislaman, berlandaskan nilai
+                            kemanusiaan, keadilan, dan kearifan lokal.</p>
+                    </div>
+                    <div class="mission-list"><span class="card-index">02 / MISI</span>
+                        <div class="mission-item"><b>01</b>
+                            <p>Menyelenggarakan pendidikan hukum dan keislaman yang bermutu serta relevan dengan
+                                perkembangan zaman.</p>
+                        </div>
+                        <div class="mission-item"><b>02</b>
+                            <p>Mengembangkan penelitian yang berkontribusi bagi ilmu pengetahuan dan kemaslahatan
+                                masyarakat.</p>
+                        </div>
+                        <div class="mission-item"><b>03</b>
+                            <p>Menguatkan pengabdian kepada masyarakat dengan semangat keadilan dan nilai-nilai Islami.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="program section-wrap section-space" id="program">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow"><span class="eyebrow-line"></span PILIH JALANMU</p>
+                    <h2>Program studi<br><em>untuk berdampak.</em></h2>
+                </div>
+                <p>Dua bidang ilmu yang saling melengkapi, membuka ruang kontribusi luas bagi masyarakat dan bangsa.</p>
+            </div>
+            <div class="program-grid">
+                <article class="program-card law-card">
+                    <div class="program-top"><span class="program-number">01</span><span class="program-symbol">⚖</span>
+                    </div>
+                    <div class="program-art law-art"><span>LEX</span>
+                        <div class="art-ring"></div>
+                    </div>
+                    <div class="program-info"><span class="program-label">SARJANA · S.H.</span>
+                        <h3>Ilmu Hukum</h3>
+                        <p>Mendalami sistem hukum, keadilan, dan praktik hukum untuk menjadi profesional yang
+                            berintegritas.</p><a href="#kontak" class="card-link">Lihat selengkapnya <span>↗</span></a>
+                    </div>
+                </article>
+                <article class="program-card islam-card">
+                    <div class="program-top"><span class="program-number">02</span><span class="program-symbol">۞</span>
+                    </div>
+                    <div class="program-art islam-art"><span>عِلْم</span>
+                        <div class="art-ring"></div>
+                    </div>
+                    <div class="program-info"><span class="program-label">SARJANA · S.Pd.</span>
+                        <h3>Pendidikan Agama Islam</h3>
+                        <p>Mengembangkan pendidik dan cendekiawan yang inspiratif, moderat, dan berwawasan keislaman.
+                        </p><a href="#kontak" class="card-link">Lihat selengkapnya <span>↗</span></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="services section-space" id="layanan">
+            <div class="section-wrap">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow"><span class="eyebrow-line"></span KAMPUS DALAM GENGGAMAN</p>
+                        <h2>Layanan untuk<br><em>perjalanan akademikmu.</em></h2>
+                    </div>
+                    <p>Akses berbagai fasilitas digital kampus dengan mudah untuk mendukung pengalaman belajar yang
+                        lebih baik.</p>
+                </div>
+                <div class="service-grid"><a class="service-card" href="https://example.com/siakad" target="_blank"
+                        rel="noreferrer"><span class="service-icon">▦</span><span class="service-arrow">↗</span>
+                        <h3>SIAKAD</h3>
+                        <p>Kelola KRS, nilai, jadwal kuliah, dan informasi akademik dalam satu platform.</p><span
+                            class="service-link">Buka layanan <span>↗</span></span>
+                    </a><a class="service-card" href="https://example.com/perpustakaan" target="_blank"
+                        rel="noreferrer"><span class="service-icon">▤</span><span class="service-arrow">↗</span>
+                        <h3>Perpustakaan</h3>
+                        <p>Jelajahi koleksi literatur hukum, keislaman, dan sumber akademik digital.</p><span
+                            class="service-link">Jelajahi koleksi <span>↗</span></span>
+                    </a><a class="service-card" href="https://example.com/e-learning" target="_blank"
+                        rel="noreferrer"><span class="service-icon">◫</span><span class="service-arrow">↗</span>
+                        <h3>E-Learning</h3>
+                        <p>Ruang belajar daring untuk materi, diskusi, dan aktivitas perkuliahan.</p><span
+                            class="service-link">Masuk kelas <span>↗</span></span>
+                    </a></div>
+            </div>
+        </section>
+        <section class="news section-wrap section-space" id="berita">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow"><span class="eyebrow-line"></span CERITA KAMPUS</p>
+                    <h2>Kabar &amp; <em>inspirasi.</em></h2>
+                </div><a href="#berita" class="text-link desktop-link">Semua berita <span>↗</span></a>
+            </div>
+            <div class="news-grid">
+                <article class="news-card"><a href="#kontak" class="news-image news-image-one"
+                        aria-label="Baca berita seminar hukum"><span>DISKUSI PUBLIK</span></a>
+                    <div class="news-content"><time datetime="2025-06-12">12 JUNI 2025</time>
+                        <h3>FHAI gelar diskusi publik tentang tantangan hukum di era digital</h3>
+                        <p>Akademisi dan praktisi berbagi pandangan mengenai peran hukum dalam menjawab perubahan
+                            teknologi.</p><a href="#kontak" class="card-link">Baca selengkapnya <span>↗</span></a>
+                    </div>
+                </article>
+                <article class="news-card"><a href="#kontak" class="news-image news-image-two"
+                        aria-label="Baca berita pengabdian masyarakat"><span>PENGABDIAN</span></a>
+                    <div class="news-content"><time datetime="2025-05-28">28 MEI 2025</time>
+                        <h3>Mahasiswa FHAI hadirkan edukasi hukum bagi masyarakat</h3>
+                        <p>Program kolaboratif untuk meningkatkan literasi hukum dan kesadaran hak warga.</p><a
+                            href="#kontak" class="card-link">Baca selengkapnya <span>↗</span></a>
+                    </div>
+                </article>
+                <article class="news-card"><a href="#kontak" class="news-image news-image-three"
+                        aria-label="Baca berita kegiatan akademik"><span>KEHIDUPAN KAMPUS</span></a>
+                    <div class="news-content"><time datetime="2025-05-10">10 MEI 2025</time>
+                        <h3>Menumbuhkan tradisi akademik melalui ruang belajar bersama</h3>
+                        <p>Mahasiswa dan dosen membangun budaya dialog, riset, dan berbagi gagasan.</p><a href="#kontak"
+                            class="card-link">Baca selengkapnya <span>↗</span></a>
+                    </div>
+                </article>
+            </div><a href="#berita" class="text-link mobile-link">Semua berita <span>↗</span></a>
+        </section>
+        <section class="cta-section">
+            <div class="section-wrap cta-inner">
+                <div>
+                    <p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span LANGKAH PERTAMAMU</p>
+                    <h2>Siap menjadi bagian<br>dari <em>perjalanan kami?</em></h2>
+                </div>
+                <div class="cta-actions"><a class="button button-light" href="#kontak">Daftar Sekarang
+                        <span>↗</span></a><a class="cta-secondary" href="#program">Jelajahi Fakultas <span>↓</span></a>
+                </div><span class="cta-decoration">۞</span>
+            </div>
+        </section>
+        <section class="contact section-wrap section-space" id="kontak">
+            <div class="contact-heading">
+                <p class="eyebrow"><span class="eyebrow-line"></span KAMI SIAP MENYAPA</p>
+                <h2>Mari terhubung<br><em>dengan kami.</em></h2>
+                <p>Punya pertanyaan tentang program atau pendaftaran? Tim kami siap membantu.</p>
+            </div>
+            <div class="contact-details"><a href="tel:+62254601234"><span
+                        class="contact-icon">↗</span><small>TELEPON</small><strong>+62 254 601 234</strong></a><a
+                    href="mailto:fhai@unkha.ac.id"><span
+                        class="contact-icon">↗</span><small>EMAIL</small><strong>fhai@unkha.ac.id</strong></a>
+                <div><span class="contact-icon">⌖</span><small>ALAMAT</small><strong>Jl. Jenderal Ahmad Yani No.
+                        1<br>Cilegon, Banten 42418</strong></div>
+            </div><a class="map-card" href="https://maps.google.com/?q=Universitas+Al-Khairiyah+Cilegon" target="_blank"
+                rel="noreferrer" aria-label="Buka lokasi Universitas Al-Khairiyah di Google Maps"><span
+                    class="map-grid"></span><span class="map-pin">⌖</span><span class="map-label"><strong>Universitas
+                        Al-Khairiyah</strong><small>Cilegon, Banten · Buka di Google Maps ↗</small></span></a>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="section-wrap">
+            <div class="footer-main">
+                <div class="footer-brand"><a class="brand brand-footer" href="#home"><span
+                            class="brand-mark">ف</span><span
+                            class="brand-name">FHAI<small>AL-KHAIRIYAH</small></span></a>
+                    <p>Fakultas Hukum dan Agama Islam<br>Universitas Al-Khairiyah</p>
+                    <p class="footer-motto">Berilmu, berintegritas, membawa maslahat.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>JELAJAHI</h4><a href="#tentang">Tentang kami</a><a href="#visi">Visi &amp; Misi</a><a
+                        href="#program">Program Studi</a><a href="#berita">Berita</a>
+                </div>
+                <div class="footer-column">
+                    <h4>LAYANAN</h4><a href="https://example.com/siakad">SIAKAD</a><a
+                        href="https://example.com/perpustakaan">Perpustakaan</a><a
+                        href="https://example.com/e-learning">E-Learning</a><a href="#kontak">Penerimaan mahasiswa</a>
+                </div>
+                <div class="footer-column footer-social">
+                    <h4>IKUTI KAMI</h4><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram
+                        ↗</a><a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook ↗</a><a
+                        href="https://youtube.com" target="_blank" rel="noreferrer">YouTube ↗</a><a
+                        href="https://tiktok.com" target="_blank" rel="noreferrer">TikTok ↗</a>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2025 FHAI Universitas Al-Khairiyah. Hak cipta dilindungi.</span><a
+                    href="#kontak">Kebijakan Privasi</a><span class="footer-credit">Dibangun dengan niat baik
+                    <span>✳</span></span></div>
+        </div>
+    </footer>
+    <div class="modal" id="video-modal" aria-hidden="true" role="dialog" aria-modal="true"
+        aria-label="Video pengenalan fakultas">
+        <div class="modal-backdrop" data-close-modal></div>
+        <div class="modal-panel"><button class="modal-close" id="modal-close" type="button"
+                aria-label="Tutup video">×</button>
+            <div class="video-placeholder"><span class="play-button">▶</span><strong>Video pengenalan
+                    FHAI</strong><small>Video contoh · tambahkan tautan video resmi fakultas</small></div>
+        </div>
+    </div>
+    <script src="{{ asset('assets/script.js') }}"></script>
+</body>
+
+</html>
