@@ -48,20 +48,22 @@ window.addEventListener('scroll', () => {
 const modal = document.getElementById('video-modal');
 const videoButton = document.getElementById('video-button');
 const closeButton = document.getElementById('modal-close');
-function closeModal() {
-  modal.classList.remove('open');
-  modal.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
-  videoButton.focus();
+if (modal && videoButton && closeButton) {
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    videoButton.focus();
+  }
+  videoButton.addEventListener('click', () => {
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    closeButton.focus();
+  });
+  closeButton.addEventListener('click', closeModal);
+  modal.querySelector('[data-close-modal]').addEventListener('click', closeModal);
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
 }
-videoButton.addEventListener('click', () => {
-  modal.classList.add('open');
-  modal.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
-  closeButton.focus();
-});
-closeButton.addEventListener('click', closeModal);
-modal.querySelector('[data-close-modal]').addEventListener('click', closeModal);
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && modal.classList.contains('open')) closeModal();
-});

@@ -175,7 +175,7 @@
         <section class="vision section-space" id="visi">
             <div class="section-wrap vision-grid">
                 <div>
-                    <p class="eyebrow"><span class="eyebrow-line"></span ARAH &amp; TUJUAN</p>
+                    <p class="eyebrow"><span class="eyebrow-line"></span> ARAH &amp; TUJUAN</p>
                     <h2>Masa depan yang<br><em>kami perjuangkan.</em></h2>
                     <div class="vision-symbol">۞</div>
                 </div>
@@ -221,7 +221,7 @@
         <section class="program section-wrap section-space" id="program">
             <div class="section-heading">
                 <div>
-                    <p class="eyebrow"><span class="eyebrow-line"></span PILIH JALANMU</p>
+                    <p class="eyebrow"><span class="eyebrow-line"></span> PILIH JALANMU</p>
                     <h2>Program studi<br><em>untuk berdampak.</em></h2>
                 </div>
                 <p>Bidang ilmu yang saling melengkapi, membuka ruang kontribusi luas bagi masyarakat dan bangsa.</p>
@@ -257,7 +257,7 @@
             <div class="section-wrap">
                 <div class="section-heading">
                     <div>
-                        <p class="eyebrow"><span class="eyebrow-line"></span KAMPUS DALAM GENGGAMAN</p>
+                        <p class="eyebrow"><span class="eyebrow-line"></span> KAMPUS DALAM GENGGAMAN</p>
                         <h2>Layanan untuk<br><em>perjalanan akademikmu.</em></h2>
                     </div>
                     <p>Akses berbagai fasilitas digital kampus dengan mudah untuk mendukung pengalaman belajar yang
@@ -302,41 +302,76 @@
         <section class="news section-wrap section-space" id="berita">
             <div class="section-heading">
                 <div>
-                    <p class="eyebrow"><span class="eyebrow-line"></span CERITA KAMPUS</p>
+                    <p class="eyebrow">
+                        <span class="eyebrow-line"></span> CERITA KAMPUS
+                    </p>
                     <h2>Kabar &amp; <em>inspirasi.</em></h2>
-                </div><a href="#berita" class="text-link desktop-link">Semua berita <span>↗</span></a>
+                </div>
+                <a href="#berita" class="text-link desktop-link">Semua berita <span>↗</span></a>
             </div>
             <div class="news-grid">
-                <article class="news-card"><a href="#kontak" class="news-image news-image-one"
-                        aria-label="Baca berita seminar hukum"><span>DISKUSI PUBLIK</span></a>
-                    <div class="news-content"><time datetime="2025-06-12">12 JUNI 2025</time>
-                        <h3>FHAI gelar diskusi publik tentang tantangan hukum di era digital</h3>
-                        <p>Akademisi dan praktisi berbagi pandangan mengenai peran hukum dalam menjawab perubahan
-                            teknologi.</p><a href="#kontak" class="card-link">Baca selengkapnya <span>↗</span></a>
+                @forelse ($news as $item)
+                    <article class="news-card">
+                        <a href="{{ route('news.show', $item->slug) }}" class="news-image news-image-three"
+                            aria-label="Baca berita: {{ $item->title }}">
+                            @if ($item->image_url)
+                                <img src="{{ Storage::disk('public')->url($item->image_url) }}" alt="" loading="lazy">
+                            @endif
+                        </a>
+                        <div class="news-content">
+                            <time datetime="{{ $item->date }}">
+                                {{ Carbon\Carbon::parse($item->date)->translatedFormat('d F Y') }}
+                            </time>
+                            <h3><a href="{{ route('news.show', $item->slug) }}">{{ $item->title }}</a></h3>
+                            <p>{{ Str::limit(strip_tags($item->description), 100, '...') }}</p>
+                            <a href="{{ route('news.show', $item->slug) }}" class="card-link">Baca selengkapnya
+                                <span>↗</span></a>
+                        </div>
+                    </article>
+                @empty
+                    <div class="news-empty">
+                        <span class="news-empty-icon" aria-hidden="true">۞</span>
+                        <p>Belum ada berita terbaru.
+                            <small>Informasi kegiatan FHAI akan hadir di sini.</small>
+                        </p>
                     </div>
-                </article>
-                <article class="news-card"><a href="#kontak" class="news-image news-image-two"
-                        aria-label="Baca berita pengabdian masyarakat"><span>PENGABDIAN</span></a>
-                    <div class="news-content"><time datetime="2025-05-28">28 MEI 2025</time>
-                        <h3>Mahasiswa FHAI hadirkan edukasi hukum bagi masyarakat</h3>
-                        <p>Program kolaboratif untuk meningkatkan literasi hukum dan kesadaran hak warga.</p><a
-                            href="#kontak" class="card-link">Baca selengkapnya <span>↗</span></a>
-                    </div>
-                </article>
-                <article class="news-card"><a href="#kontak" class="news-image news-image-three"
-                        aria-label="Baca berita kegiatan akademik"><span>KEHIDUPAN KAMPUS</span></a>
-                    <div class="news-content"><time datetime="2025-05-10">10 MEI 2025</time>
-                        <h3>Menumbuhkan tradisi akademik melalui ruang belajar bersama</h3>
-                        <p>Mahasiswa dan dosen membangun budaya dialog, riset, dan berbagi gagasan.</p><a href="#kontak"
-                            class="card-link">Baca selengkapnya <span>↗</span></a>
-                    </div>
-                </article>
-            </div><a href="#berita" class="text-link mobile-link">Semua berita <span>↗</span></a>
+                @endforelse
+            </div>
+            @if ($news->hasPages())
+                <div class="news-pagination">
+                    <p class="news-pagination-summary">
+                        Menampilkan <strong>{{ $news->firstItem() }}–{{ $news->lastItem() }}</strong>
+                        dari <strong>{{ $news->total() }}</strong> berita
+                    </p>
+                    <nav class="news-pagination-links" aria-label="Navigasi halaman berita">
+                        @if ($news->onFirstPage())
+                            <span class="news-page-link is-disabled" aria-disabled="true">← Sebelumnya</span>
+                        @else
+                            <a class="news-page-link" href="{{ $news->previousPageUrl() }}#berita" rel="prev">
+                                ← Sebelumnya
+                            </a>
+                        @endif
+
+                        <span class="news-page-indicator" aria-current="page">
+                            Halaman {{ $news->currentPage() }} dari {{ $news->lastPage() }}
+                        </span>
+
+                        @if ($news->hasMorePages())
+                            <a class="news-page-link" href="{{ $news->nextPageUrl() }}#berita" rel="next">
+                                Selanjutnya →
+                            </a>
+                        @else
+                            <span class="news-page-link is-disabled" aria-disabled="true">Selanjutnya →</span>
+                        @endif
+                    </nav>
+                </div>
+            @endif
+            <a href="#berita" class="text-link mobile-link">Semua berita <span>↗</span></a>
         </section>
         <section class="cta-section">
             <div class="section-wrap cta-inner">
                 <div>
-                    <p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span LANGKAH PERTAMAMU</p>
+                    <p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> LANGKAH PERTAMAMU</p>
                     <h2>Siap menjadi bagian<br>dari <em>perjalanan kami?</em></h2>
                 </div>
                 <div class="cta-actions">

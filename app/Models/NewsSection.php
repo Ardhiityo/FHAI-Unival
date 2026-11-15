@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Str;
 
 class NewsSection extends Model
 {
@@ -14,14 +13,4 @@ class NewsSection extends Model
         'date',
         'image_url',
     ];
-
-    protected static function booted()
-    {
-        static::creating(function ($model) {
-            $model->slug = Str::slug($model->title);
-        });
-        static::updating(function ($model) {
-            $model->slug = Str::slug($model->title);
-        });
-    }
 }
