@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('image_url');
             $table->text('description');
             $table->string('detail_url');
+            $table->string('degree');
+            $table->string('academic_degree');
             $table->timestamps();
         });
     }

@@ -16,6 +16,20 @@ class StudyProgramSectionForm
                 TextInput::make('title')
                     ->columnSpanFull()
                     ->required(),
+                TextInput::make('degree')
+                    ->columnSpanFull()
+                    ->required(),
+                TextInput::make('academic_degree')
+                    ->columnSpanFull()
+                    ->required(),
+                Textarea::make('description')
+                    ->columnSpanFull()
+                    ->required()
+                    ->columnSpanFull(),
+                TextInput::make('detail_url')
+                    ->columnSpanFull()
+                    ->url()
+                    ->required(),
                 FileUpload::make('image_url')
                     ->columnSpanFull()
                     ->image()
@@ -27,14 +41,6 @@ class StudyProgramSectionForm
                     ->maxSize(1024)
                     ->openable()
                     ->hint('Image files only. Maximum size: 1MB'),
-                Textarea::make('description')
-                    ->columnSpanFull()
-                    ->required()
-                    ->columnSpanFull(),
-                TextInput::make('detail_url')
-                    ->columnSpanFull()
-                    ->url()
-                    ->required(),
             ]);
     }
 }

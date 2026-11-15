@@ -2,14 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\HeroSection;
+use App\Models\ServiceSection;
 use App\Models\StatisticSection;
+use App\Models\StudyProgramSection;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $statistic_sections = StatisticSection::orderBy('id', 'desc')->take(3);
+        $statistic_sections = StatisticSection::orderBy('id', 'desc')->take(3)->get();
+        $hero_sections = HeroSection::orderBy('id', 'desc')->take(1)->get();
+        $study_program = StudyProgramSection::all();
+        $services = ServiceSection::all();
 
-        return view('welcome', compact('statistic_sections'));
+        return view('welcome', compact('statistic_sections', 'hero_sections', 'study_program', 'services'));
     }
 }

@@ -56,15 +56,49 @@
     <main>
         <section class="hero section-wrap">
             <div class="hero-copy">
-                <p class="eyebrow"><span class="eyebrow-line"></span UNIVERSITAS AL-KHAIRIYAH · CILEGON</p>
+                <p class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    UNIVERSITAS AL-KHAIRIYAH · CILEGON
+                </p>
                 <h1>Menguatkan ilmu.<br><em>Menegakkan keadilan.</em></h1>
                 <p class="hero-description">Tempat bertemunya nilai hukum, keislaman, dan kemanusiaan. Bersama kami,
                     tumbuh menjadi pemimpin yang berilmu dan berintegritas.</p>
                 <div class="hero-actions"><a class="button" href="#kontak">Daftar Sekarang <span>↗</span></a><a
                         class="text-link" href="#tentang">Jelajahi fakultas <span>↓</span></a></div>
                 <div class="hero-note">
-                    <div class="avatar-stack"><span>FH</span><span>AI</span><span>UA</span></div>
-                    <p><strong>Belajar dengan makna</strong><br>Berakar pada nilai, siap untuk masa depan.</p>
+                    @forelse ($hero_sections as $hero_section)
+                        <p>
+                            <strong>{{ $hero_section->accreditation }}</strong>
+                            <br>
+                            Akreditasi
+                        </p>
+                        <p>
+                            <strong>{{ $hero_section->total_industry_partner }}+</strong>
+                            <br>
+                            Mitra Industri
+                        </p>
+                        <p>
+                            <strong>{{ $hero_section->total_number_of_graduate }}+</strong>
+                            <br>
+                            Alumni
+                        </p>
+                    @empty
+                        <p>
+                            <strong>A</strong>
+                            <br>
+                            Akreditasi
+                        </p>
+                        <p>
+                            <strong>12+</strong>
+                            <br>
+                            Mitra Industri
+                        </p>
+                        <p>
+                            <strong>721+</strong>
+                            <br>
+                            Alumni
+                        </p>
+                    @endforelse
                 </div>
             </div>
             <div class="hero-visual">
@@ -82,13 +116,22 @@
                 <div class="hero-orbit orbit-one"></div>
                 <div class="hero-orbit orbit-two"></div>
             </div>
-            <div class="hero-bottom"><span>01 / 04</span><span class="hero-bottom-line"></span><span>ILMU · INTEGRITAS ·
-                    KEMANUSIAAN</span></div>
+            <div class="hero-bottom">
+                <span class="hero-bottom-line"></span>
+                <span>ILMU · INTEGRITAS · KEMANUSIAAN</span>
+            </div>
         </section>
         <section class="stats section-wrap" aria-label="Statistik fakultas">
-            <div class="stat-item"><strong>02</strong><span>Program Studi</span></div>
-            <div class="stat-item"><strong>1.2<span>k</span></strong><span>Mahasiswa aktif</span></div>
-            <div class="stat-item"><strong>38</strong><span>Dosen &amp; akademisi</span></div>
+            @forelse ($statistic_sections as $statistic_section)
+                <div class="stat-item">
+                    <strong>{{ number_format($statistic_section->total, 0, '.') }}</strong>
+                    <span>Program Studi</span>
+                </div>
+            @empty
+                <div class="stat-item"><strong>02</strong><span>Program Studi</span></div>
+                <div class="stat-item"><strong>1.2<span>k</span></strong><span>Mahasiswa aktif</span></div>
+                <div class="stat-item"><strong>38</strong><span>Dosen &amp; akademisi</span></div>
+            @endforelse
             <div class="stat-item stat-quote"><span class="quote-mark">“</span>
                 <p>Pendidikan yang baik melahirkan keberanian untuk berbuat benar.</p>
             </div>
@@ -107,13 +150,20 @@
                     hukum, menghidupi nilai keislaman, dan peka terhadap kebutuhan masyarakat.</p>
                 <p>Melalui pembelajaran yang kritis dan lingkungan yang inklusif, kami mempersiapkan lulusan untuk
                     berkontribusi di ruang publik, lembaga hukum, dan komunitas.</p>
-                <div class="about-points"><span><b>01</b> Pembelajaran kontekstual</span><span><b>02</b> Dosen
-                        berpengalaman</span><span><b>03</b> Nilai integritas</span></div><a class="text-link"
-                    href="#visi">Selengkapnya tentang FHAI <span>↗</span></a>
-                <div class="video-card"><button class="play-button" id="video-button" type="button"
-                        aria-label="Putar video pengenalan fakultas">▶</button><span><strong>Kenali FHAI lebih
-                            dekat</strong><small>Video pengenalan fakultas · 02:15</small></span><span
-                        class="video-duration">02:15</span></div>
+                <div class="about-points">
+                    <span>
+                        <b>01</b> Pembelajaran kontekstual
+                    </span>
+                    <span>
+                        <b>02</b> Dosen berpengalaman
+                    </span>
+                    <span>
+                        <b>03</b> Nilai integritas
+                    </span>
+                    <span>
+                        <b>04</b> Nilai Spiritual
+                    </span>
+                </div><a class="text-link" href="#visi">Selengkapnya tentang FHAI <span>↗</span></a>
             </div>
         </section>
         <section class="vision section-space" id="visi">
@@ -151,7 +201,7 @@
                     <p class="eyebrow"><span class="eyebrow-line"></span PILIH JALANMU</p>
                     <h2>Program studi<br><em>untuk berdampak.</em></h2>
                 </div>
-                <p>Dua bidang ilmu yang saling melengkapi, membuka ruang kontribusi luas bagi masyarakat dan bangsa.</p>
+                <p>Bidang ilmu yang saling melengkapi, membuka ruang kontribusi luas bagi masyarakat dan bangsa.</p>
             </div>
             <div class="program-grid">
                 <article class="program-card law-card">
@@ -190,22 +240,40 @@
                     <p>Akses berbagai fasilitas digital kampus dengan mudah untuk mendukung pengalaman belajar yang
                         lebih baik.</p>
                 </div>
-                <div class="service-grid"><a class="service-card" href="https://example.com/siakad" target="_blank"
-                        rel="noreferrer"><span class="service-icon">▦</span><span class="service-arrow">↗</span>
-                        <h3>SIAKAD</h3>
-                        <p>Kelola KRS, nilai, jadwal kuliah, dan informasi akademik dalam satu platform.</p><span
-                            class="service-link">Buka layanan <span>↗</span></span>
-                    </a><a class="service-card" href="https://example.com/perpustakaan" target="_blank"
-                        rel="noreferrer"><span class="service-icon">▤</span><span class="service-arrow">↗</span>
-                        <h3>Perpustakaan</h3>
-                        <p>Jelajahi koleksi literatur hukum, keislaman, dan sumber akademik digital.</p><span
-                            class="service-link">Jelajahi koleksi <span>↗</span></span>
-                    </a><a class="service-card" href="https://example.com/e-learning" target="_blank"
-                        rel="noreferrer"><span class="service-icon">◫</span><span class="service-arrow">↗</span>
-                        <h3>E-Learning</h3>
-                        <p>Ruang belajar daring untuk materi, diskusi, dan aktivitas perkuliahan.</p><span
-                            class="service-link">Masuk kelas <span>↗</span></span>
-                    </a></div>
+                <div class="service-grid">
+                    @forelse ($services as $service)
+                        <a class="service-card" href="{{ $service->url }}" target="_blank" rel="noreferrer">
+                            <span class="service-icon">▦</span><span class="service-arrow">↗</span>
+                            <h3>{{ $service->title }}</h3>
+                            <p>{{ $service->description }}</p>
+                            <span class="service-link">
+                                Buka layanan
+                                <span>↗</span>
+                            </span>
+                        </a>
+                    @empty
+                        <a class="service-card" href="https://example.com/siakad" target="_blank" rel="noreferrer">
+                            <span class="service-icon">▦</span><span class="service-arrow">↗</span>
+                            <h3>SIAKAD</h3>
+                            <p>Kelola KRS, nilai, jadwal kuliah, dan informasi akademik dalam satu platform.</p><span
+                                class="service-link">Buka layanan <span>↗</span></span>
+                        </a>
+                        <a class="service-card" href="https://example.com/perpustakaan" target="_blank"
+                            rel="noreferrer"><span class="service-icon">▤</span><span class="service-arrow">↗</span>
+                            <h3>Perpustakaan</h3>
+                            <p>Jelajahi koleksi literatur hukum, keislaman, dan sumber akademik digital.</p><span
+                                class="service-link">Jelajahi koleksi <span>↗</span>
+                            </span>
+                        </a>
+                        <a class="service-card" href="https://example.com/e-learning" target="_blank" rel="noreferrer">
+                            <span class="service-icon">◫</span><span class="service-arrow">↗</span>
+                            <h3>E-Learning</h3>
+                            <p>Ruang belajar daring untuk materi, diskusi, dan aktivitas perkuliahan.</p><span
+                                class="service-link">Masuk kelas <span>↗</span>
+                            </span>
+                        </a>
+                    @endforelse
+                </div>
             </div>
         </section>
         <section class="news section-wrap section-space" id="berita">
@@ -265,10 +333,23 @@
                         class="contact-icon">↗</span><small>EMAIL</small><strong>fhai@unkha.ac.id</strong></a>
                 <div><span class="contact-icon">⌖</span><small>ALAMAT</small><strong>Jl. Jenderal Ahmad Yani No.
                         1<br>Cilegon, Banten 42418</strong></div>
-            </div><a class="map-card" href="https://maps.google.com/?q=Universitas+Al-Khairiyah+Cilegon" target="_blank"
-                rel="noreferrer" aria-label="Buka lokasi Universitas Al-Khairiyah di Google Maps"><span
-                    class="map-grid"></span><span class="map-pin">⌖</span><span class="map-label"><strong>Universitas
-                        Al-Khairiyah</strong><small>Cilegon, Banten · Buka di Google Maps ↗</small></span></a>
+            </div>
+            <div class="map-card">
+                <iframe class="map-embed" title="Peta lokasi Universitas Al-Khairiyah" loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.8390762881586!2d106.03968747476215!3d-6.016819993968526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e418e153492ffff%3A0xaabad81c1107ac4a!2sUNIVERSITAS%20AL-KHAIRIYAH!5e0!3m2!1sid!2sid!4v1787132893189!5m2!1sid!2sid">
+                </iframe>
+                <div class="map-label">
+                    <span class="map-label-icon" aria-hidden="true">⌖</span>
+                    <span class="map-label-copy">
+                        <strong>Universitas Al-Khairiyah</strong>
+                        <small>Jl. Jenderal Ahmad Yani No. 1 · Cilegon, Banten</small>
+                    </span>
+                    <a class="map-directions"
+                        href="https://www.google.com/maps/search/?api=1&amp;query=Universitas+Al-Khairiyah+Cilegon"
+                        target="_blank" rel="noreferrer">Petunjuk arah ↗</a>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="footer">

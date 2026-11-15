@@ -11,5 +11,7 @@ class StudyProgramSection extends Model
         'image_url',
         'description',
         'detail_url',
+        'degree',
+        'academic_degree',
     ];
 }
