@@ -48,9 +48,10 @@
                     href="#berita">Berita</a><a href="#kontak">Contact</a></div>
             <div class="nav-actions"><button class="theme-toggle" id="theme-toggle" type="button"
                     aria-label="Aktifkan mode gelap" title="Ubah tema"><span class="theme-icon">☾</span></button><a
-                    class="button button-small nav-apply" href="#kontak">Daftar Sekarang <span>↗</span></a><button
-                    class="menu-toggle" id="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false"
-                    aria-controls="nav-links"><span></span><span></span></button></div>
+                    class="button button-small nav-apply" href="https://unival.siakadcloud.com/spmbfront/jalur-seleksi"
+                    target="_blank">Daftar Sekarang
+                    <span>↗</span></a><button class="menu-toggle" id="menu-toggle" type="button" aria-label="Buka menu"
+                    aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button></div>
         </nav>
     </header>
     <main>
@@ -63,8 +64,13 @@
                 <h1>Menguatkan ilmu.<br><em>Menegakkan keadilan.</em></h1>
                 <p class="hero-description">Tempat bertemunya nilai hukum, keislaman, dan kemanusiaan. Bersama kami,
                     tumbuh menjadi pemimpin yang berilmu dan berintegritas.</p>
-                <div class="hero-actions"><a class="button" href="#kontak">Daftar Sekarang <span>↗</span></a><a
-                        class="text-link" href="#tentang">Jelajahi fakultas <span>↓</span></a></div>
+                <div class="hero-actions">
+                    <a class="button" href="https://unival.siakadcloud.com/spmbfront/jalur-seleksi" target="_blank">
+                        Daftar Sekarang
+                        <span>↗</span>
+                    </a>
+                    <a class="text-link" href="#tentang">Jelajahi fakultas <span>↗</span></a>
+                </div>
                 <div class="hero-note">
                     @forelse ($hero_sections as $hero_section)
                         <p>
@@ -316,8 +322,13 @@
                     <p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span LANGKAH PERTAMAMU</p>
                     <h2>Siap menjadi bagian<br>dari <em>perjalanan kami?</em></h2>
                 </div>
-                <div class="cta-actions"><a class="button button-light" href="#kontak">Daftar Sekarang
-                        <span>↗</span></a><a class="cta-secondary" href="#program">Jelajahi Fakultas <span>↓</span></a>
+                <div class="cta-actions">
+                    <a class="button button-light" href="https://unival.siakadcloud.com/spmbfront/jalur-seleksi"
+                        target="_blank">
+                        Daftar Sekarang
+                        <span>↗</span>
+                    </a>
+                    <a class="cta-secondary" href="#program">Jelajahi Fakultas <span>↗</span></a>
                 </div><span class="cta-decoration">۞</span>
             </div>
         </section>
@@ -327,12 +338,35 @@
                 <h2>Mari terhubung<br><em>dengan kami.</em></h2>
                 <p>Punya pertanyaan tentang program atau pendaftaran? Tim kami siap membantu.</p>
             </div>
-            <div class="contact-details"><a href="tel:+62254601234"><span
-                        class="contact-icon">↗</span><small>TELEPON</small><strong>+62 254 601 234</strong></a><a
-                    href="mailto:fhai@unkha.ac.id"><span
-                        class="contact-icon">↗</span><small>EMAIL</small><strong>fhai@unkha.ac.id</strong></a>
-                <div><span class="contact-icon">⌖</span><small>ALAMAT</small><strong>Jl. Jenderal Ahmad Yani No.
-                        1<br>Cilegon, Banten 42418</strong></div>
+            <div class="contact-details">
+                @forelse ($contacts as $contact)
+                    <a href="tel:" '{{ $contact->phone }}'>
+                        <span class="contact-icon">↗</span>
+                        <small>TELEPON</small>
+                        <strong>{{ $contact->phone }}</strong>
+                    </a>
+                    <a href="mailto:" '{{ $contact->email }}'>
+                        <span class="contact-icon">↗</span>
+                        <small>EMAIL</small>
+                        <strong>{{ $contact->email }}</strong>
+                    </a>
+                @empty
+                    <a href="tel:+62254601234">
+                        <span class="contact-icon">↗</span>
+                        <small>TELEPON</small>
+                        <strong>+62 254 601 234</strong>
+                    </a>
+                    <a href="mailto:fhai@unival-cilegon.ac.id">
+                        <span class="contact-icon">↗</span>
+                        <small>EMAIL</small><strong>fhai@unival-cilegon.ac.id</strong>
+                    </a>
+                @endforelse
+                <div>
+                    <span class="contact-icon">⌖</span><small>ALAMAT</small>
+                    <strong>
+                        Jl. Kh.Enggus Arja No.1, Kec. Citangkil, Kota Cilegon
+                    </strong>
+                </div>
             </div>
             <div class="map-card">
                 <iframe class="map-embed" title="Peta lokasi Universitas Al-Khairiyah" loading="lazy"
@@ -368,19 +402,42 @@
                     <p class="footer-motto">Berilmu, berintegritas, membawa maslahat.</p>
                 </div>
                 <div class="footer-column">
-                    <h4>JELAJAHI</h4><a href="#tentang">Tentang kami</a><a href="#visi">Visi &amp; Misi</a><a
-                        href="#program">Program Studi</a><a href="#berita">Berita</a>
+                    <h4>JELAJAHI</h4>
+                    <a href="#tentang">Tentang kami</a>
+                    <a href="#visi">Visi &amp; Misi</a>
+                    <a href="#program">Program Studi</a><a href="#berita">Berita</a>
                 </div>
                 <div class="footer-column">
-                    <h4>LAYANAN</h4><a href="https://example.com/siakad">SIAKAD</a><a
-                        href="https://example.com/perpustakaan">Perpustakaan</a><a
-                        href="https://example.com/e-learning">E-Learning</a><a href="#kontak">Penerimaan mahasiswa</a>
+                    <h4>AKSES CEPAT</h4>
+                    @forelse ($contacts as $contact)
+                        <a href="tel:" '{{ $contact->phone }}'>
+                            Email
+                        </a>
+                        <a href="mailto:" '{{ $contact->email }}'>
+                            Phone
+                        </a>
+                    @empty
+                        <a href="mailto:alkhairiyah.university@gmail.com">
+                            Email
+                        </a>
+                        <a href="tel:+02547877057">
+                            Phone
+                        </a>
+                    @endforelse
+                    <a href="https://maps.app.goo.gl/aaANvAizKfh4mW5V6" target="_blank">Alamat</a>
+                    <a href="https://unival.siakadcloud.com/spmbfront/jalur-seleksi" target="_blank">Pendaftaran</a>
                 </div>
                 <div class="footer-column footer-social">
-                    <h4>IKUTI KAMI</h4><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram
-                        ↗</a><a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook ↗</a><a
-                        href="https://youtube.com" target="_blank" rel="noreferrer">YouTube ↗</a><a
-                        href="https://tiktok.com" target="_blank" rel="noreferrer">TikTok ↗</a>
+                    <h4>IKUTI KAMI</h4>
+                    <a href="https://www.instagram.com/fhai.unival" target="_blank" rel="noreferrer">
+                        Instagram ↗
+                    </a>
+                    <a href="https://www.facebook.com/share/1HguKtbAgh/" target="_blank" rel="noreferrer">
+                        Facebook ↗
+                    </a>
+                    <a href="https://www.youtube.com/@MajelisIlmuAl-Khairiyah20" target="_blank" rel="noreferrer">
+                        YouTube ↗
+                    </a>
                 </div>
             </div>
             <div class="footer-bottom">

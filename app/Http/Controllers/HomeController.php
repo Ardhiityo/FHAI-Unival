@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use App\Models\HeroSection;
 use App\Models\ServiceSection;
 use App\Models\StatisticSection;
@@ -15,7 +16,8 @@ class HomeController extends Controller
         $hero_sections = HeroSection::orderBy('id', 'desc')->take(1)->get();
         $study_program = StudyProgramSection::all();
         $services = ServiceSection::all();
+        $contacts = Contact::orderBy('id', 'desc')->take(1)->get();
 
-        return view('welcome', compact('statistic_sections', 'hero_sections', 'study_program', 'services'));
+        return view('welcome', compact('statistic_sections', 'hero_sections', 'study_program', 'services', 'contacts'));
     }
 }
