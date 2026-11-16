@@ -190,32 +190,29 @@
                                 kemanusiaan, keadilan, dan kearifan lokal.</p>
                         </div>
                     @endforelse
-                    @forelse ($missions as $index => $mission)
-                            <div class="mission-list">
-                                <span class="card-index">02 / MISI</span>
-                                <div class="mission-item"><b>{{ number_format($index + 1, 2) }}</b>
-                                    <p>{{ $mission->mission }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    @empty
                     <div class="mission-list">
                         <span class="card-index">02 / MISI</span>
-                        <div class="mission-item"><b>01</b>
-                            <p>Menyelenggarakan pendidikan hukum dan keislaman yang bermutu serta relevan dengan
-                                perkembangan zaman.</p>
-                        </div>
-                        <div class="mission-item"><b>02</b>
-                            <p>Mengembangkan penelitian yang berkontribusi bagi ilmu pengetahuan dan kemaslahatan
-                                masyarakat.</p>
-                        </div>
-                        <div class="mission-item"><b>03</b>
-                            <p>Menguatkan pengabdian kepada masyarakat dengan semangat keadilan dan nilai-nilai Islami.
-                            </p>
-                        </div>
+                        @forelse ($missions as $index => $mission)
+                            <div class="mission-item">
+                                <b>{{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</b>
+                                <p>{{ $mission->mission }}</p>
+                            </div>
+                        @empty
+                            <div class="mission-item"><b>01</b>
+                                <p>Menyelenggarakan pendidikan hukum dan keislaman yang bermutu serta relevan dengan
+                                    perkembangan zaman.</p>
+                            </div>
+                            <div class="mission-item"><b>02</b>
+                                <p>Mengembangkan penelitian yang berkontribusi bagi ilmu pengetahuan dan kemaslahatan
+                                    masyarakat.</p>
+                            </div>
+                            <div class="mission-item"><b>03</b>
+                                <p>Menguatkan pengabdian kepada masyarakat dengan semangat keadilan dan nilai-nilai Islami.
+                                </p>
+                            </div>
+                        @endforelse
                     </div>
-                @endforelse
-            </div>
+                </div>
             </div>
         </section>
         <section class="program section-wrap section-space" id="program">
@@ -266,7 +263,7 @@
                 <div class="service-grid">
                     @forelse ($services as $service)
                         <a class="service-card" href="{{ $service->url }}" target="_blank" rel="noreferrer">
-                            <span class="service-icon">▦</span><span class="service-arrow">↗</span>
+                            <span class="service-icon">▦</span>
                             <h3>{{ $service->title }}</h3>
                             <p>{{ $service->description }}</p>
                             <span class="service-link">
@@ -276,20 +273,20 @@
                         </a>
                     @empty
                         <a class="service-card" href="https://example.com/siakad" target="_blank" rel="noreferrer">
-                            <span class="service-icon">▦</span><span class="service-arrow">↗</span>
+                            <span class="service-icon">▦</span>
                             <h3>SIAKAD</h3>
                             <p>Kelola KRS, nilai, jadwal kuliah, dan informasi akademik dalam satu platform.</p><span
                                 class="service-link">Buka layanan <span>↗</span></span>
                         </a>
                         <a class="service-card" href="https://example.com/perpustakaan" target="_blank"
-                            rel="noreferrer"><span class="service-icon">▤</span><span class="service-arrow">↗</span>
+                            rel="noreferrer"><span class="service-icon">▤</span>
                             <h3>Perpustakaan</h3>
                             <p>Jelajahi koleksi literatur hukum, keislaman, dan sumber akademik digital.</p><span
                                 class="service-link">Jelajahi koleksi <span>↗</span>
                             </span>
                         </a>
                         <a class="service-card" href="https://example.com/e-learning" target="_blank" rel="noreferrer">
-                            <span class="service-icon">◫</span><span class="service-arrow">↗</span>
+                            <span class="service-icon">◫</span>
                             <h3>E-Learning</h3>
                             <p>Ruang belajar daring untuk materi, diskusi, dan aktivitas perkuliahan.</p><span
                                 class="service-link">Masuk kelas <span>↗</span>
