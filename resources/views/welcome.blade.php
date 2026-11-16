@@ -150,7 +150,7 @@
                 <span class="about-vertical">FAKULTAS HUKUM &amp; AGAMA ISLAM</span>
             </div>
             <div class="about-copy">
-                <p class="eyebrow"><span class="eyebrow-line"></span TENTANG KAMI</p>
+                <p class="eyebrow"><span class="eyebrow-line"></span> TENTANG KAMI</p>
                 <h2>Akademik yang berakar,<br><em>relevan untuk zaman.</em></h2>
                 <p>Fakultas Hukum dan Agama Islam Universitas Al-Khairiyah hadir untuk mencetak generasi yang memahami
                     hukum, menghidupi nilai keislaman, dan peka terhadap kebutuhan masyarakat.</p>
