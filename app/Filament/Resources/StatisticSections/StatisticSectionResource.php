@@ -22,7 +22,7 @@ class StatisticSectionResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::ChartBar;
 
-    protected static ?string $recordTitleAttribute = 'description';
+    protected static ?string $recordTitleAttribute = 'title';
 
     public static function form(Schema $schema): Schema
     {
