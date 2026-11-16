@@ -17,16 +17,15 @@ class NewsSectionsTable
     {
         return $table
             ->columns([
+                ImageColumn::make('image_url')
+                    ->disk('public')
+                    ->circular()
+                    ->visibility('public'),
                 TextColumn::make('title')
-                    ->searchable(),
-                TextColumn::make('slug')
                     ->searchable(),
                 TextColumn::make('date')
                     ->date()
                     ->sortable(),
-                ImageColumn::make('image_url')
-                    ->disk('public')
-                    ->visibility('public'),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

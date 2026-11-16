@@ -17,12 +17,11 @@ class StudyProgramSectionsTable
     {
         return $table
             ->columns([
-                TextColumn::make('title')
-                    ->searchable(),
                 ImageColumn::make('image_url')
                     ->disk('public')
+                    ->circular()
                     ->visibility('public'),
-                TextColumn::make('detail_url')
+                TextColumn::make('title')
                     ->searchable(),
                 TextColumn::make('created_at')
                     ->dateTime()

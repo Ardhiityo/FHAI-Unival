@@ -15,11 +15,11 @@ class StatisticSectionsTable
     {
         return $table
             ->columns([
+                TextColumn::make('title')
+                    ->searchable(),
                 TextColumn::make('total')
                     ->numeric()
                     ->sortable(),
-                TextColumn::make('title')
-                    ->searchable(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
