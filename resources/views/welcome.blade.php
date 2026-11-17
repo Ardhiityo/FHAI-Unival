@@ -224,30 +224,61 @@
                 <p>Bidang ilmu yang saling melengkapi, membuka ruang kontribusi luas bagi masyarakat dan bangsa.</p>
             </div>
             <div class="program-grid">
-                <article class="program-card law-card">
-                    <div class="program-top"><span class="program-number">01</span><span class="program-symbol">⚖</span>
-                    </div>
-                    <div class="program-art law-art"><span>LEX</span>
-                        <div class="art-ring"></div>
-                    </div>
-                    <div class="program-info"><span class="program-label">SARJANA · S.H.</span>
-                        <h3>Ilmu Hukum</h3>
-                        <p>Mendalami sistem hukum, keadilan, dan praktik hukum untuk menjadi profesional yang
-                            berintegritas.</p><a href="#kontak" class="card-link">Lihat selengkapnya <span>↗</span></a>
-                    </div>
-                </article>
-                <article class="program-card islam-card">
-                    <div class="program-top"><span class="program-number">02</span><span class="program-symbol">۞</span>
-                    </div>
-                    <div class="program-art islam-art"><span>عِلْم</span>
-                        <div class="art-ring"></div>
-                    </div>
-                    <div class="program-info"><span class="program-label">SARJANA · S.Pd.</span>
-                        <h3>Pendidikan Agama Islam</h3>
-                        <p>Mengembangkan pendidik dan cendekiawan yang inspiratif, moderat, dan berwawasan keislaman.
-                        </p><a href="#kontak" class="card-link">Lihat selengkapnya <span>↗</span></a>
-                    </div>
-                </article>
+                @forelse ($study_programs as $index => $study_program)
+                    <article class="program-card islam-card">
+                        <div class="program-top"><span
+                                class="program-number">{{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span><span
+                                class="program-symbol">۞</span>
+                        </div>
+                        <div class="program-art islam-art">
+                            @if ($study_program->image_url)
+                                <img src="{{ Storage::disk('public')->url($study_program->image_url) }}"
+                                    alt="{{ $study_program->title }}" class="program-art-image" loading="lazy">
+                            @else
+                                <span>عِلْم</span>
+                            @endif
+                            <div class="art-ring"></div>
+                        </div>
+                        <div class="program-info">
+                            <span class="program-label">
+                                {{ $study_program->degree }} · {{ $study_program->academic_degree }}
+                            </span>
+                            <h3>{{ $study_program->title }}</h3>
+                            <p>
+                                {{ $study_program->description }}
+                            </p>
+                            <a href="{{ $study_program->detail_url }}" class="card-link" target="_blank">
+                                Lihat selengkapnya
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </article>
+                @empty
+                    <article class="program-card law-card">
+                        <div class="program-top"><span class="program-number">01</span><span class="program-symbol">⚖</span>
+                        </div>
+                        <div class="program-art law-art"><span>LEX</span>
+                            <div class="art-ring"></div>
+                        </div>
+                        <div class="program-info"><span class="program-label">SARJANA · S.H.</span>
+                            <h3>Ilmu Hukum</h3>
+                            <p>Mendalami sistem hukum, keadilan, dan praktik hukum untuk menjadi profesional yang
+                                berintegritas.</p><a href="#kontak" class="card-link">Lihat selengkapnya <span>↗</span></a>
+                        </div>
+                    </article>
+                    <article class="program-card islam-card">
+                        <div class="program-top"><span class="program-number">02</span><span class="program-symbol">۞</span>
+                        </div>
+                        <div class="program-art islam-art"><span>عِلْم</span>
+                            <div class="art-ring"></div>
+                        </div>
+                        <div class="program-info"><span class="program-label">SARJANA · S.Pd.</span>
+                            <h3>Pendidikan Agama Islam</h3>
+                            <p>Mengembangkan pendidik dan cendekiawan yang inspiratif, moderat, dan berwawasan keislaman.
+                            </p><a href="#kontak" class="card-link">Lihat selengkapnya <span>↗</span></a>
+                        </div>
+                    </article>
+                @endforelse
             </div>
         </section>
         <section class="services section-space" id="layanan">

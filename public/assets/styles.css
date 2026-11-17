@@ -717,10 +717,11 @@ button {
 }
 .program-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
 }
 .program-card {
+    min-width: 0;
     padding: 24px;
     border: 1px solid var(--line);
     background: var(--surface);
@@ -755,6 +756,14 @@ button {
     place-items: center;
     background: linear-gradient(135deg, #222848, #46447f 60%, #7a76ba);
     color: rgba(255, 255, 255, 0.91);
+}
+.program-art-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.85);
 }
 .program-art:before,
 .program-art:after {
@@ -1502,6 +1511,10 @@ button {
     .section-wrap {
         width: min(100% - 40px, 620px);
     }
+    .program-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
     .section-space {
         padding-block: 80px;
     }
@@ -1853,10 +1866,6 @@ button {
     }
     .section-heading h2 {
         font-size: clamp(32px, 10vw, 40px);
-    }
-    .program-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
     }
     .program-art {
         height: 170px;

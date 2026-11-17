@@ -17,7 +17,7 @@ class HomeController extends Controller
     {
         $statistic_sections = StatisticSection::orderBy('id', 'desc')->take(3)->get();
         $hero_sections = HeroSection::orderBy('id', 'desc')->take(1)->get();
-        $study_program = StudyProgramSection::all();
+        $study_programs = StudyProgramSection::all();
         $services = ServiceSection::all();
         $contacts = Contact::orderBy('id', 'desc')->take(1)->get();
         $visions = Vision::orderBy('id', 'desc')->take(1)->get();
@@ -27,7 +27,7 @@ class HomeController extends Controller
         return view('welcome', compact(
             'statistic_sections',
             'hero_sections',
-            'study_program',
+            'study_programs',
             'services',
             'contacts',
             'visions',
