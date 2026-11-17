@@ -28,7 +28,7 @@ class StatisticSectionPolicy
      */
     public function create(User $user): bool
     {
-        return ! StatisticSection::query()->exists();
+        return StatisticSection::count() <= 2;
     }
 
     /**
