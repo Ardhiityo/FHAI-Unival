@@ -146,7 +146,7 @@
             <div class="about-visual">
                 <div class="about-photo"><img src="./assets/campus-hero.png"
                         alt="Detail ruang belajar FHAI dengan buku dan simbol keadilan"></div>
-                <div class="about-badge"><span>جامعة</span><strong>AL-KHAIRIYAH</strong><small>EST. 1925</small></div>
+                <div class="about-badge"><span>جامعة</span><strong>AL-KHAIRIYAH</strong><small>EST. 1916</small></div>
                 <span class="about-vertical">FAKULTAS HUKUM &amp; AGAMA ISLAM</span>
             </div>
             <div class="about-copy">

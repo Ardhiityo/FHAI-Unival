@@ -303,12 +303,12 @@ button {
 .hero-note p {
     margin: 0;
     color: var(--muted);
-    font-size: 15px;
+    font-size: 12px;
     line-height: 1.55;
 }
 .hero-note strong {
     color: var(--ink);
-    font-size: 20px;
+    font-size: 13px;
 }
 .hero-visual {
     height: 515px;
