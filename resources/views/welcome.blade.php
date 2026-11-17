@@ -131,7 +131,7 @@
             @forelse ($statistic_sections as $statistic_section)
                 <div class="stat-item">
                     <strong>{{ number_format($statistic_section->total, 0, '.') }}</strong>
-                    <span>Program Studi</span>
+                    <span>{{ $statistic_section->title }}</span>
                 </div>
             @empty
                 <div class="stat-item"><strong>02</strong><span>Program Studi</span></div>
