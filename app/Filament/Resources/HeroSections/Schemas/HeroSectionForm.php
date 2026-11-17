@@ -15,9 +15,11 @@ class HeroSectionForm
                     ->columnSpanFull()
                     ->required(),
                 TextInput::make('total_industry_partner')
+                    ->integer()
                     ->columnSpanFull()
                     ->required(),
                 TextInput::make('total_number_of_graduate')
+                    ->integer()
                     ->columnSpanFull()
                     ->required(),
             ]);

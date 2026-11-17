@@ -15,6 +15,7 @@ class StatisticSectionForm
                     ->columnSpanFull()
                     ->required(),
                 TextInput::make('total')
+                    ->integer()
                     ->columnSpanFull()
                     ->required(),
             ]);
